@@ -17,7 +17,7 @@ app.on('ready', function(){
 function mainAppStartup(){
     //#1 - Create App Skeleton 
     const windowOptions = {
-        width: 1440,
+        width: 1900,
         height : 860,
         title: app.getName()    
     }

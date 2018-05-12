@@ -4,10 +4,14 @@
     <meta charset="utf-8">
 
     <!-- #1 - Load External CSS from each library -->
-    <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 
-    <!-- #2 - Load CSS from each section component -->
+    <!-- #2 - Load CSS for main app (generic) -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- #2.1 - Load CSS from each section component -->
     <link rel="stylesheet" href="sections/navbar/navbar.css">
+    <link rel="stylesheet" href="sections/home/home.css">
 
     <!-- #3 - Load HTML from each section component -->
     <link rel="import" href="sections/home/home.html">
@@ -17,7 +21,19 @@
 
     <!-- Navbar configuration -->
     <nav class="nav">
+        <div class="nav-border-thin"></div>
 
+        <!-- logo -->           
+        <div class="nav-logo">
+            <img src="assets/images/logo.png">
+        </div>
+    
+        <!-- what is selected -->
+        <div class="nav-selection">   
+            <div class="">A NOSSA SELEÇÃO</div>
+            <div>IMÓVEIS PRIME</div>
+        </div>         
+                
     </nav>
 
     <!-- Main App Content -->
@@ -28,7 +44,8 @@
     <!-- #4 - JS and Components -->    
     <script>
         require('jquery');
-        require('bootstrap');        
+        require('bootstrap');     
+        require('./sections/imports');
     </script>
 
       

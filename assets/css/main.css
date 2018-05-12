@@ -1,0 +1,19 @@
+/* Text Color */
+.text-blue-dark{
+    color: rgba(14, 57, 100, 1);
+}
+.text-blue-ligh{
+    color: rgba(43, 191, 228, 1);
+}
+
+/* Text Size */
+
+
+/* Container color */
+.container-blue-dark{
+    background-color: rgba(14, 57, 100, 1);
+}
+.container-blue-light{
+    background-color: rgba(43, 191, 228, 1);
+}
+
