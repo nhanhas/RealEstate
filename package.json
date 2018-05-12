@@ -1,0 +1,17 @@
+{
+  "name": "realestate",
+  "version": "1.0.0",
+  "description": "Real Estate Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^2.0.0",
+    "bootstrap": "*",
+    "jquery": "*",
+    "popper.js": "^1.12.9"
+  }
+}
