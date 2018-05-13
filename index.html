@@ -31,23 +31,52 @@
     
         <!-- what is selected -->
         <div class="nav-selection">   
-            <div id="nav-selection-title" class="text-size-xl text-bold text-blue-ligh">A NOSSA SELEÇÃO</div>
+            <div id="nav-selection-title" class="text-size-xl text-bold text-blue-light">A NOSSA SELEÇÃO</div>
             <div id="nav-selection-subtitle" class="text-size-lg text-blue-dark">IMÓVEIS PRIME</div>
         </div>         
         
-        <!-- Filter Button -->
+        <!-- Filter Button -->          
         <div id="filter-btn" class="nav-filter-btn container-blue-light">
             <span class="text-size-lg text-white">FILTRAR</span>
             <span class="text-size-lg text-white"><i class="fa fa-chevron-down"></i></span>
             <div class="nav-filter-btn-arrow-left"></div>
             <div class="nav-filter-btn-arrow-right"></div>
-        </div>    
+        </div> 
+
         <!-- Container with all filters - start with hidden -->
         <div id="filter-container" class="nav-filter-container is-hidden">
             <div class="nav-filter-container-arrow-up"></div>
-            Textos e cenas
-        </div>
+            
+            <!-- Filters -->
+            <!-- #1 -->
+            <div class="dropdown nav-filter-dropdown">
+                <div class="text-gray-light" data-toggle="dropdown">
+                    <span id="filter-1">Finalidade</span><span class="pull-right"><i class="fa fa-chevron-down text-blue-light"></i></span>
+                </div>
+                <div class="dropdown-menu">
+                    <hr class="dropdown-hr" style="border-top: 1px solid black">
+                    
+                    <div class="dropdown-item" data-filter-id="1">Another action</div>
+                    <hr class="dropdown-hr">
+                    <div class="dropdown-item" data-filter-id="1">Something else here</div>
+                </div>
+            </div>
+            <!-- #2 -->
+            <div class="dropdown nav-filter-dropdown">
+                <div class="text-gray-light" data-toggle="dropdown">
+                    <span id="filter-2">Concelho</span><span class="pull-right"><i class="fa fa-chevron-down text-blue-light"></i></span>
+                </div>
+                <div class="dropdown-menu">
+                    <hr class="dropdown-hr" style="border-top: 1px solid black">
 
+                    <div class="dropdown-item" data-filter-id="2">Another action</div>
+                    <hr class="dropdown-hr">
+                    <div class="dropdown-item" data-filter-id="2">Something else here</div>
+                </div>
+            </div>    
+        </div><!-- end of filter container-->
+     
+           
     </nav>
 
     <!-- Border bottom (only sweet sauce for layout)-->

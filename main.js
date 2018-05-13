@@ -44,6 +44,43 @@ function mainAppStartup(){
 //Main App Menu
 const mainMenuTemplate = [
     {
+        label : 'Application',
+        submenu : [
+            {
+                label : 'Quit',                
+                accelerator : process.platform === 'darwin' ? 'Command + Q' : 'Ctrl + Q',
+                click(){
+                    app.quit();
+                }
+            }
+        ]
+    },
+    {
+        label: 'Edit',
+        submenu : [
+            {
+                label : 'Cut',
+                accelerator : process.platform === 'darwin' ? 'Command + X' : 'Ctrl + X',
+                selector: "cut:"
+            },
+            {
+                label : 'Copy',
+                accelerator : process.platform === 'darwin' ? 'Command + C' : 'Ctrl + C',
+                selector: "copy:"
+            },
+            {
+                label : 'Paste',
+                accelerator : process.platform === 'darwin' ? 'Command + V' : 'Ctrl + V',
+                selector: "paste:"
+            },
+            {
+                label : 'Select All',
+                accelerator : process.platform === 'darwin' ? 'Command + A' : 'Ctrl + A',
+                selector: "selectAll:"
+            }
+        ]
+    },
+    {
         label : 'Develop',
         submenu : [
             {
@@ -59,14 +96,7 @@ const mainMenuTemplate = [
                 click(item, focusedWindow){
                     focusedWindow.toggleDevTools();
                 }
-            },
-            {
-                label : 'Quit',                
-                accelerator : process.platform === 'darwin' ? 'Command + Q' : 'Ctrl + Q',
-                click(){
-                    app.quit();
-                }
-            }
+            }            
         ]
     }
 ];

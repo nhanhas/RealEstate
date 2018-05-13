@@ -22,10 +22,16 @@ section{
 .text-white{
     color: white;
 }
+.text-gray-light{
+    color: rgba(85, 85, 85, 1);
+}
+.text-gray-xlight{
+    color: rgba(148, 148, 148, 1);
+}
 .text-blue-dark{
     color: rgba(14, 57, 100, 1);
 }
-.text-blue-ligh{
+.text-blue-light{
     color: rgba(43, 191, 228, 1);
 }
 
