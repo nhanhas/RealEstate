@@ -5,6 +5,7 @@
 
     <!-- #1 - Load External CSS from each library -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 
     <!-- #2 - Load CSS for main app (generic) -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -30,11 +31,20 @@
     
         <!-- what is selected -->
         <div class="nav-selection">   
-            <div class="">A NOSSA SELEÇÃO</div>
-            <div>IMÓVEIS PRIME</div>
+            <div id="nav-selection-title" class="text-size-xl text-bold text-blue-ligh">A NOSSA SELEÇÃO</div>
+            <div id="nav-selection-subtitle" class="text-size-lg text-blue-dark">IMÓVEIS PRIME</div>
         </div>         
-                
+        
+        <!-- Filter Button -->
+        <div class="nav-filter-btn container-blue-light">
+            <span class="text-size-lg text-white">FILTRAR</span>
+            <span class="text-size-lg text-white"><i class="fa fa-chevron-down"></i></span>
+        </div>    
+
     </nav>
+
+    <!-- Border bottom (only sweet sauce for layout)-->
+    <div class="nav-border-thin at-bottom"></div>
 
     <!-- Main App Content -->
     <main class="content"></main>
@@ -44,7 +54,7 @@
     <!-- #4 - JS and Components -->    
     <script>
         require('jquery');
-        require('bootstrap');     
+        require('bootstrap');          
         require('./sections/imports');
     </script>
 

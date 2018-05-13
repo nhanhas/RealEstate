@@ -1,4 +1,13 @@
+/* Reset */
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
 /* Text Color */
+.text-white{
+    color: white;
+}
 .text-blue-dark{
     color: rgba(14, 57, 100, 1);
 }
@@ -7,7 +16,15 @@
 }
 
 /* Text Size */
-
+.text-size-lg{
+    font-size: 15px;
+}
+.text-size-xl{
+    font-size: 25px;
+}
+.text-bold{
+    font-weight: bold;
+}
 
 /* Container color */
 .container-blue-dark{

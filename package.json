@@ -12,6 +12,7 @@
     "electron": "^2.0.0",
     "bootstrap": "*",
     "jquery": "*",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.12.9",
+    "font-awesome": "*"
   }
 }
