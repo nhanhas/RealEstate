@@ -40,25 +40,34 @@
     text-align: center;
     cursor: pointer;
 }
-.nav-filter-btn::before{
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: rgba(14, 57, 100, 1);  
+.nav-filter-btn-arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 0 solid transparent;
+    border-bottom: 8px solid transparent;     
+    border-right:9px solid rgba(14, 57, 100, 1); 
     position: absolute;
-    transform: rotate(30deg);
-    bottom: 2px;
-    right: -4px;
-    z-index: -1;
+    left: -9px;
+    bottom: 0px;
 }
-.nav-filter-btn::after{
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: rgba(14, 57, 100, 1);  
+.nav-filter-btn-arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 0 solid transparent;
+    border-bottom: 8px solid transparent;     
+    border-left:9px solid rgba(14, 57, 100, 1); 
     position: absolute;
-    transform: rotate(55deg);
-    bottom: 2px;
-    left: -4px;
-    z-index: -1;
+    right: -9px;
+    bottom: 0px;
 }
+
+/* #filters container */
+.nav-filter-container{
+    position: absolute;
+    right: 50px;
+    height: 100px;
+    width: 250px;
+    top: 130px;
+    border: 1px solid red;
+}
+

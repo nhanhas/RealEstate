@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "electron": "^2.0.0",
+    "electron-settings": "^3.0.7",
     "bootstrap": "*",
     "jquery": "*",
     "popper.js": "^1.12.9",
