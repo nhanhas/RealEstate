@@ -1,4 +1,6 @@
 const electron = require('electron');
+const settings = require('electron-settings');
+const fs = require('fs');
 const url = require('url');
 const path = require('path');
 
@@ -8,9 +10,10 @@ let mainWindow;
 
 app.on('ready', function(){
     
-    //#1 - Start the App
-    mainAppStartup();
-    
+    //#1 - Download App Content from service
+    //then start app after download
+    getAppContent();
+
 });
 
 //App Config (Sizes, icons and content)
@@ -39,6 +42,31 @@ function mainAppStartup(){
     const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
     //#5.1 - Load Main Menu 
     Menu.setApplicationMenu(mainMenu);
+}
+
+//App content (download or local)
+function getAppContent(){
+    //#1 - Check if exists internet Connection
+    //TODO
+
+    //#2 - At this point, it must be stored in content.json
+    let contentFile = path.join(__dirname, '/content/content.json');
+    
+    //#3 - Read Content
+    fs.readFile(contentFile, 'utf-8', (err, data) => {
+        if(err){
+            alert("An error ocurred reading the file :" + err.message);
+            return;
+        }
+
+        //#4 - store it in electron-settings
+        settings.set('content', JSON.parse(data));
+
+        //#5 - Now lauch app!
+        mainAppStartup();
+    });
+    
+    
 }
 
 //Main App Menu
