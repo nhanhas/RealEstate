@@ -36,6 +36,9 @@ section{
 }
 
 /* Text Size */
+.text-size-small{
+    font-size: 12px;
+}
 .text-size-lg{
     font-size: 15px;
 }
