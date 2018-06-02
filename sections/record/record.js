@@ -5,6 +5,36 @@ const ipc = require('electron').ipcRenderer;
 //#1 - Get Main APP content, downloaded at start app
 const APP_CONTENT = settings.get('content');
 
+//#2 - Add Event Listener on click to popup de dialog with Contact
+const contactBtn = document.getElementById('record-contact-btn');
+contactBtn.addEventListener('click', (event) => {
+    
+    if($('#record-contact-btn').hasClass('record-contact-opened')){
+
+        //close contact
+        $('#record-contact-btn').removeClass('record-contact-opened');
+        $('#record-contact-details').addClass('hidden');
+        $('#record-contact-title').removeClass('hidden');
+        //change chevron direction
+        $('#record-contact-chevron').removeClass('fa-chevron-down');
+        $('#record-contact-chevron').addClass('fa-chevron-up');
+
+    }else{
+
+        //open contact
+        $('#record-contact-btn').addClass('record-contact-opened');
+        $('#record-contact-details').removeClass('hidden');
+        $('#record-contact-title').addClass('hidden');
+        //change chevron direction
+        $('#record-contact-chevron').removeClass('fa-chevron-up');
+        $('#record-contact-chevron').addClass('fa-chevron-down');
+        
+    }
+    
+
+});
+
+
 
 //#A - Responsible to build entire view based on house id 
 //received from ipc [home.js > main.js > record.js]

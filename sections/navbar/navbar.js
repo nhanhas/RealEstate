@@ -128,4 +128,5 @@ function closeHouseDetails(){
 ipc.on('showHouseDetail', function (event, houseId) {    
     //#1 - To Show "Back Button"
     $('#close-details-btn').css('display', 'grid');    
+    //#2 - Change Header Title to name of the house [by id]
 });

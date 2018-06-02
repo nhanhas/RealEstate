@@ -1,0 +1,99 @@
+.record-canvas{
+    position: relative;
+    height: 100%;
+}
+
+/* Carousel Photos */
+.record-carousel-photos{
+    position: absolute;
+    overflow: hidden;
+    top: 40px;
+    left: 40px;
+    bottom: 80px;
+    right: 60%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+}
+/* Record Ribbon */
+.record-tile-ribbon{
+    position: absolute;
+    top: 60px;
+    right: -60px;
+    width: 250px;
+    transform: rotate(45deg);
+    text-align: center;
+    height: 25px;
+    padding-top: 4px;
+}
+
+
+
+/* Info details */
+.record-info-details{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    bottom: 80px;
+    left: 41%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+    box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+}
+
+.record-info-description{
+    margin-bottom: 5px;
+}
+
+/* Contact button */
+/* #filter button */
+.record-contact-btn{
+    position: absolute;
+    right: 15px;
+    bottom: -8px;
+    padding: 7px;
+    display: grid;
+    text-align: center;
+    cursor: pointer;
+    width: 265px;
+}
+.record-contact-btn-arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 0 solid transparent;
+    border-bottom: 8px solid transparent;     
+    border-right:9px solid rgba(14, 57, 100, 1); 
+    position: absolute;
+    left: -9px;
+    bottom: 0px;
+}
+.record-contact-btn-arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 0 solid transparent;
+    border-bottom: 8px solid transparent;     
+    border-left:9px solid rgba(14, 57, 100, 1); 
+    position: absolute;
+    right: -9px;
+    bottom: 0px;
+}
+#record-contact-chevron{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.record-contact-opened{
+    height: 310px;
+}
+
+#record-contact-details{
+    
+}
+.hidden{
+    display: none;
+}
