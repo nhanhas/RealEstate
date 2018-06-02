@@ -3,6 +3,8 @@ const settings = require('electron-settings');
 const fs = require('fs');
 const url = require('url');
 const path = require('path');
+const ipc = require('electron').ipcMain;
+
 
 const {app, BrowserWindow, Menu} = electron;
 
@@ -128,3 +130,35 @@ const mainMenuTemplate = [
         ]
     }
 ];
+
+
+/******************************
+ **********IPC Section*********
+ ******************************/
+
+//#IPC handler when client click "+" at Home
+ipc.on('showHouseDetail', function (event, houseId) {
+    
+    //#1 - Call main function responsible to render details
+    renderHouseDetail(houseId);
+    
+});
+
+//#IPC handler when client click "Back" at Navbar
+ipc.on('closeHouseDetail', function (event, houseId) {
+    
+    //#1 - Call main function responsible to render home
+    closeHouseDetail();
+    
+});
+
+
+//#IPC when user click "+" to show details 
+ipc.on('ipc-show-house-detail', function (event, arg) {
+    event.sender.send('showHouseDetail', arg);
+});
+
+//#IPC when user click "Back" on Navbar to close details
+ipc.on('ipc-close-house-detail', function (event, arg) {
+    event.sender.send('closeHouseDetail', arg);
+})

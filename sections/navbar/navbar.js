@@ -1,5 +1,6 @@
-const settings = require('electron-settings')
-const $ = require('jQuery')
+const settings = require('electron-settings');
+const $ = require('jQuery');
+const ipc = require('electron').ipcRenderer;
 
 //#1 - Create Filter Options
 const filters = [
@@ -70,7 +71,16 @@ searchBtn.addEventListener('click', (event) => {
     alert('One day it will search for this filters...')
 });
 
+//#6 - Back button [only visible when details house are shown]
+const backBtn = document.getElementById('close-details-btn');
+backBtn.addEventListener('click', (event) => {
 
+    //#1 - To Hide "Back Button"
+    $('#close-details-btn').css('display', 'none');
+
+    //#1 - Call function to send an IPC
+    closeHouseDetails();   
+});
 
 //#A - #TEMPLATE# Generate a dropdown with options
 function TEMPLATE_generateDropdown(filter, indexOfFilter){
@@ -103,3 +113,19 @@ function TEMPLATE_generateDropdown(filter, indexOfFilter){
 
 }
 
+/******************************
+ **********IPC Section*********
+ ******************************/
+
+
+//#B - Handler when house details is clicked [IPC sender]
+function closeHouseDetails(){
+    ipc.send('ipc-close-house-detail', undefined);
+}
+
+
+//#IPC handler when client click "+" at Home
+ipc.on('showHouseDetail', function (event, houseId) {    
+    //#1 - To Show "Back Button"
+    $('#close-details-btn').css('display', 'grid');    
+});

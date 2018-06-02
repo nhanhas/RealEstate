@@ -13,9 +13,11 @@
     <!-- #2.1 - Load CSS from each section component -->
     <link rel="stylesheet" href="sections/navbar/navbar.css">
     <link rel="stylesheet" href="sections/home/home.css">
+    <link rel="stylesheet" href="sections/record/record.css">
 
     <!-- #3 - Load HTML from each section component -->
     <link rel="import" href="sections/home/home.html">
+    <link rel="import" href="sections/record/record.html">
     
 </head>
 <body>
@@ -34,6 +36,11 @@
             <div id="nav-selection-title" class="text-size-xl text-bold text-blue-light">A NOSSA SELEÇÃO</div>
             <div id="nav-selection-subtitle" class="text-size-lg text-blue-dark">IMÓVEIS PRIME</div>
         </div>         
+        
+        <!-- Back Button [visible when details are shown]-->
+        <div id="close-details-btn" class="nav-back-btn container-blue-light">
+            <span class="text-size-lg text-white">VOLTAR</span>
+        </div> 
         
         <!-- Filter Button -->          
         <div id="filter-btn" class="nav-filter-btn container-blue-light">
@@ -74,7 +81,6 @@
         require('bootstrap');          
         require('./sections/imports');
         require('./sections/navbar/navbar');
-        require('./sections/home/home');
     </script>
 
       

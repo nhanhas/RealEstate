@@ -27,7 +27,7 @@
                                 <!-- details -->
                                 <div class="home-details">
                                     <!-- More details btn -->
-                                    <div class="home-details-more text-blue-light">
+                                    <div data-house-id="1" class="home-details-more text-blue-light">
                                         <div class="home-details-circle"><i class="fa fa-plus fa-lg"></i></div>
                                     </div>
 
@@ -50,7 +50,36 @@
 
 
                         <div class="col-md-3">2</div>
-                        <div class="col-md-3">3</div>
+                        <div class="col-md-3">
+                            
+                             <!--#TEMPLATE#-->
+                             <div id="house-3" class="house-tile">                                
+                                <!-- Photo -->
+                                <div class="home-photo"><img src="https://i.pinimg.com/736x/2d/f3/35/2df33518437d13f6667f1c2020c3c1ff--house-architecture-amazing-architecture.jpg"> </div>
+                                
+                                <!-- details -->
+                                <div class="home-details">
+                                    <!-- More details btn -->
+                                    <div data-house-id="3" class="home-details-more text-blue-light">
+                                        <div class="home-details-circle"><i class="fa fa-plus fa-lg"></i></div>
+                                    </div>
+
+                                    <!-- Type and Rooms -->
+                                    <div class="text-size-lg text-bold text-blue-dark">Apartamento T3</div>
+                                    <!-- City -->
+                                    <div class="text-size-lg text-blue-dark">Algés</div>
+                                    <!-- Price -->
+                                    <div class="text-size-lg text-bold text-blue-light">Venda: <span>220 000€</span></div>
+                                </div>                                
+
+                                <!-- House Ribbon -->
+                                <div class="house-tile-ribbon container-blue-light text-size-small text-white">
+                                    IMÓVEL DA BANCA
+                                </div>
+
+                            </div>
+                            
+                        </div>
                         <div class="col-md-3">4</div>
                     </div>
                 </div>
@@ -73,9 +102,13 @@
             </a>
         </div>
 
+         <!-- #4 - JS and Components -->    
+        <script type="text/javascript">        
+            require('./sections/home/home');
+        </script>
 
     </section>
 
-    
+   
     
 </template>
