@@ -97,3 +97,63 @@
 .hidden{
     display: none;
 }
+
+
+/* Properties Table */
+.record-info-properties{
+    margin-top: 20px;
+}
+th{
+    padding-top: 20px;
+    padding-left: 15px;
+    border-right: 1px solid gray;
+}
+th:not(:nth-of-type(4)){
+    width: 20%;
+} 
+th:nth-of-type(4){
+    width: 20%;
+    border-right: 0 ;
+} 
+td{
+    padding-left: 15px;
+    border-right: 1px solid gray;
+}
+td:nth-of-type(4){
+    border-right: 0 ;
+} 
+
+/* Icon properties */
+.record-info-icons{
+    position: absolute;
+    bottom: 10px;
+    zoom: 0.9;    
+}
+.record-property-group{
+    position: relative;
+}
+.record-info-icons img{
+    width: 60px;
+}
+.properties-generic{
+    position: absolute;
+    color: white;
+    top: 10px;
+    left: 27px;
+    font-size: 10px;
+}
+
+.property-energy{
+    position: absolute;
+    color: white;
+    top: 20px;
+    left: 24px;
+    font-size: 20px;
+}
+.property-area{
+    position: absolute;
+    color: white;
+    top: 12px;
+    left: 17px;
+    font-size: 8px;
+}
