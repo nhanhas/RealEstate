@@ -3,6 +3,7 @@ const settings = require('electron-settings');
 const fs = require('fs');
 const url = require('url');
 const path = require('path');
+const request = require('request');
 const ipc = require('electron').ipcMain;
 
 
@@ -48,25 +49,54 @@ function mainAppStartup(){
 
 //App content (download or local)
 function getAppContent(){
-    //#1 - Check if exists internet Connection
-    //TODO
 
-    //#2 - At this point, it must be stored in content.json
-    let contentFile = path.join(__dirname, '/content/content.json');
-    
-    //#3 - Read Content
-    fs.readFile(contentFile, 'utf-8', (err, data) => {
-        if(err){
-            alert("An error ocurred reading the file :" + err.message);
-            return;
+    //#A - This aux function to read it from Disk
+    var readContentFromDisk = function(){
+        //#2 - At this point, it must be stored in content.json
+        let contentFile = path.join(__dirname, '/content/content.json');
+        
+        //#3 - Read Content
+        fs.readFile(contentFile, 'utf-8', (err, data) => {
+            if(err){
+                alert("An error ocurred reading the file :" + err.message);
+                return;
+            }
+
+            //#4 - store it in electron-settings
+            settings.set('content', JSON.parse(data));
+
+            //#5 - Now lauch app!
+            mainAppStartup();
+        });
+    }
+
+    //#1 - Try to GET from Server
+    let contentURL = "http://vps152961.ovh.net/imobiliaria/api/?section=imobiliaria&author=1";
+    //#1.1 - Make get now
+    request(contentURL, { json: true }, (err, res, body) => {
+        if (err) { 
+            console.log('There is no connection to server. Using Offline mode...');
+            readContentFromDisk();
+            return false; 
         }
+        
+        //#1.2 - if there is no error, store it [and read it in case of fail]
+        let contentFile = path.join(__dirname, '/content/content.json');
+        let jsonData = JSON.stringify(body);
+        fs.writeFile(contentFile, jsonData, function(err) {
+            if (err) {
+                //Error on Save
+                console.log(err);
+                readContentFromDisk();
+                return false;
+            }
+        });
 
-        //#4 - store it in electron-settings
-        settings.set('content', JSON.parse(data));
-
-        //#5 - Now lauch app!
-        mainAppStartup();
+        //#1.3 - After update the content, read it from disk
+        readContentFromDisk();
     });
+
+    
     
     
 }
