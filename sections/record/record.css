@@ -91,9 +91,6 @@
     height: 310px;
 }
 
-#record-contact-details{
-    
-}
 .hidden{
     display: none;
 }
@@ -156,4 +153,19 @@ td:nth-of-type(4){
     top: 12px;
     left: 17px;
     font-size: 8px;
+}
+
+/* Contact details */
+#record-contact-details{
+    position: absolute;
+    top: 30px;
+}
+.contact-photo img{
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 90px;
+}
+.contact-divider{
+    border-top: 1px solid white;
+    width: 80%;
 }
