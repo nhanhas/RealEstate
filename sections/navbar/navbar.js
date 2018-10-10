@@ -35,6 +35,7 @@ filters.forEach(function(filterItem){
     //#3 - Add it to filter container
     var filterContainer = document.getElementById('filter-templates');
     filterContainer.innerHTML += template;
+
 });
 
 //#3 - Add Event Listener on click to popup de dialog with filters
@@ -61,14 +62,44 @@ $('.dropdown-item').click(function(){
     let optionValue = $(this).text();
 
     //#2 - Change View Dropdown Selected to this option
+    $('#filter-' + filterIndex).data('option',optionValue);
     $('#filter-' + filterIndex).text(optionValue);
     $('#filter-' + filterIndex).addClass('text-blue-light');
+    
+    //#3 - Clear button handler and visibility
+    $('#filter-clear-' + filterIndex).removeClass('is-hidden');
+    $('#filter-clear-' + filterIndex).unbind();    
+    $('#filter-clear-' + filterIndex).click(function(){
+        //#4 - delete filter
+        $('#filter-' + filterIndex).data('option','');
+        $('#filter-' + filterIndex).text(filters[filterIndex].filterName);
+        $('#filter-' + filterIndex).removeClass('text-blue-light');
+        $('#filter-clear-' + filterIndex).addClass('is-hidden');
+    });
 })
+
+
 
 //#5 - Add Event Listener on click of search
 const searchBtn = document.getElementById('search-btn');
 searchBtn.addEventListener('click', (event) => {
-    alert('One day it will search for this filters...')
+    //alert('One day it will search for this filters...')
+    let filtersToUse = [];
+    let availableFilters = $('.filters');
+    //#1 - Only filter with selected ones
+    for(var i = 0; i < availableFilters.length; i++){
+        let selectedFilterValue = $(availableFilters[i]).data('option');
+        let selectedFilterName = filters[i].filterName;//Get directly from constant
+        if(selectedFilterValue !== ''){
+            //#2 - add it to 'usable filters'
+            filtersToUse.push({filterName: selectedFilterName, filterValue : selectedFilterValue})
+        }        
+    }
+
+    console.log(filtersToUse);
+    //#2 - Call doFilterSearch to make ipc send
+    doFilterSearch(filtersToUse);
+    
 });
 
 //#6 - Back button [only visible when details house are shown]
@@ -101,9 +132,11 @@ function TEMPLATE_generateDropdown(filter, indexOfFilter){
         <!-- #'+indexOfFilter+' -->\
         <div class="dropdown nav-filter-dropdown">\
             <div class="text-gray-light" data-toggle="dropdown">\
-                <span id="filter-'+indexOfFilter+'">'+filter.filterName+'</span><span class="pull-right">\
-                    <i class="fa fa-chevron-down text-blue-light"></i>\
-                </span>\
+                <span id="filter-clear-'+indexOfFilter+'" class="filter-clear-btn is-hidden"><i class="fa fa-times fa-lg"></i></span>\
+                <span id="filter-'+indexOfFilter+'" data-option="" class="filters">'+filter.filterName+'</span>\
+                    <span class="filter-expand-btn pull-right">\
+                        <i class="fa fa-chevron-down"></i>\
+                    </span>\
             </div>\
             '+dropdownItems+'\
         </div>';
@@ -121,6 +154,11 @@ function TEMPLATE_generateDropdown(filter, indexOfFilter){
 //#B - Handler when house details is clicked [IPC sender]
 function closeHouseDetails(){
     ipc.send('ipc-close-house-detail', undefined);
+}
+
+//#D - Handler when filter is pressed
+function doFilterSearch(filter){
+    ipc.send('ipc-do-filter-search', filter);
 }
 
 

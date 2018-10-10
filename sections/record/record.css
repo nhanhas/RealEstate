@@ -3,6 +3,18 @@
     height: 100%;
 }
 
+#record-section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    top: 230px;
+    overflow: hidden;
+    height: 840px !important;
+}
+
+
 /* Carousel Photos */
 .record-carousel-photos{
     position: absolute;
@@ -16,6 +28,9 @@
     -webkit-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
     box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+
 }
 /* Record Ribbon */
 .record-tile-ribbon{
@@ -43,10 +58,29 @@
     -webkit-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
     box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+
 }
 
 .record-info-description{
     margin-bottom: 5px;
+}
+
+
+
+.record-carousel-photos .inner {
+    display: inline-block;
+    position:relative;
+    padding: 0;
+    /*right: -50%;*/
+}
+
+
+.record-carousel-photos img {
+    width: 100%;
+    height: 620px;
+    margin-left: auto;
+    position:relative;
+    /*left:-50%;*/
 }
 
 /* Contact button */
@@ -54,41 +88,42 @@
 .record-contact-btn{
     position: absolute;
     right: 15px;
-    bottom: -8px;
+    bottom: -20px;
     padding: 7px;
     display: grid;
     text-align: center;
     cursor: pointer;
-    width: 265px;
+    width: 385px;
 }
 .record-contact-btn-arrow-left {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-top: 0 solid transparent;
-    border-bottom: 8px solid transparent;     
-    border-right:9px solid rgba(14, 57, 100, 1); 
+    border-bottom: 8px solid transparent;
+    border-right:9px solid rgba(14, 57, 100, 1);
     position: absolute;
     left: -9px;
     bottom: 0px;
 }
 .record-contact-btn-arrow-right {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-top: 0 solid transparent;
-    border-bottom: 8px solid transparent;     
-    border-left:9px solid rgba(14, 57, 100, 1); 
+    border-bottom: 8px solid transparent;
+    border-left:9px solid rgba(14, 57, 100, 1);
     position: absolute;
     right: -9px;
     bottom: 0px;
 }
 #record-contact-chevron{
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: 20px;
+    top: 20px;
 }
 
 .record-contact-opened{
-    height: 310px;
+    height: 440px;
+	
 }
 
 .hidden{
@@ -107,27 +142,37 @@ th{
 }
 th:not(:nth-of-type(4)){
     width: 20%;
-} 
+}
 th:nth-of-type(4){
     width: 20%;
     border-right: 0 ;
-} 
+}
 td{
     padding-left: 15px;
     border-right: 1px solid gray;
 }
 td:nth-of-type(4){
     border-right: 0 ;
-} 
+}
 
 /* Icon properties */
 .record-info-icons{
     position: absolute;
     bottom: 10px;
-    zoom: 0.9;    
+    zoom: 0.9;
+	width: 550px!important;
+	
 }
 .record-property-group{
     position: relative;
+	width: 75px !important;
+	 margin-right: 15px;
+}
+
+.record-property-group > img{
+	width: 75px !important;
+    height: 75px !important;
+
 }
 .record-info-icons img{
     width: 60px;
@@ -135,26 +180,30 @@ td:nth-of-type(4){
 .properties-generic{
     position: absolute;
     color: white;
-    top: 10px;
-    left: 27px;
+    top: 15px;
+    left: 35px;
     font-size: 10px;
 }
-
-.property-energy{
+.property-energy {
     position: absolute;
     color: white;
     top: 20px;
-    left: 24px;
+    left: 0px;
     font-size: 20px;
+    width: 100%;
+    text-align: center;
 }
 .property-area{
     position: absolute;
     color: white;
-    top: 12px;
-    left: 17px;
+    top: 15px;
+    left: 20px;
     font-size: 8px;
 }
-
+.area_small_icon > .property-area {
+	top: 15px;
+	left: 25px !important;
+}
 /* Contact details */
 #record-contact-details{
     position: absolute;
@@ -164,6 +213,7 @@ td:nth-of-type(4){
     width: 50%;
     margin: 0 auto;
     border-radius: 90px;
+	 margin-bottom: 25px !important;
 }
 .contact-divider{
     border-top: 1px solid white;

@@ -45,14 +45,24 @@ section{
 .text-size-medium{
     font-size: 14px;
 }
+.text-size-splus{
+    font-size: 20px;
+}
+.text-size-splusmore{
+    font-size: 26px;
+}
 .text-size-lg{
-    font-size: 15px;
+    font-size: 30px;
 }
 .text-size-xl{
-    font-size: 25px;
+    font-size: 50px;
 }
 .text-bold{
     font-weight: bold;
+}
+
+#nav-selection-title{
+	height: 60px;
 }
 
 /* Container color */

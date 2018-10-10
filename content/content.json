@@ -1,1 +1,175 @@
-{"titulo_nome":"Já era","subtitulo":"wrgaga","cor_superior":"verde","cor_inferior":"azul","img_fundo":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/home.png","img_wc":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/wc.png","img_quartos":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/quartos.png","img_classe_energetica":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/eficiencia.png","img_n_carros":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/garagem.png","img_area_util":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/area_util.png","img_area_bruta":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/area_bruta.png","texto_btn_filtrar":"filtrar","texto_btn_auxiliar":"voltar","imoveis-front-page":[{"idautor":"1","titulo":"Casa Grande","subtitulo":"Algarve","descricao":"aqgag","preco_venda":"344","zona":"amadora","area_util":"200","area_bruta":"30","wcs":"5","quartos":"4","carros_garagem":"4","tipologia":"T2","natureza":"Apartamento","categoria-energetica":"A +","localizacao":"Peniche","img_galeria":[{"images":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/home.png"},{"images":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/iconscout_logo-1024x1024.png"}]},{"idautor":"1","titulo":"wda","subtitulo":"awda","descricao":"dawd","preco_venda":"3343","zona":"fwfw","area_util":"456","area_bruta":"543","wcs":"5","quartos":"4","carros_garagem":"6","tipologia":"T2","natureza":"Apartamento","categoria-energetica":"A +","localizacao":"Aveiro","img_galeria":[{"images":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/iconscout_logo-1024x1024.png"}]}],"contacto":[{"imagem":"http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/home.png","nome":"Zé Carlos","imobiliaria":"Já era","n_telemovel":"999999999","email":"teste@teste.com"}]}
+{
+    "titulo_nome": "ERA Almada",
+    "subtitulo": "Um subtitulo bonitinho",
+    "screensaver_file": "52",
+    "screensaver_time": "10",
+    "cor_primaria": "#1ceae3",
+    "cor_secundaria": "#8224e3",
+    "img_logo": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/zhome-1.png",
+    "img_fundo": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/images.jpeg",
+    "img_wc": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/wc.png",
+    "img_quartos": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/quartos.png",
+    "img_classe_energetica": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/eficiencia.png",
+    "img_n_carros": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/garagem.png",
+    "img_area_util": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/area_util.png",
+    "img_area_bruta": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/area_bruta.png",
+    "texto_btn_filtrar": "filtrar",
+    "texto_btn_auxiliar": "voltar",
+    "imoveis_home_page": {
+      "27": {
+        "idautor": "3",
+        "referencia": "agerg",
+        "titulo": "Casa Grande",
+        "subtitulo": "Algarve",
+        "distrito": "Lisboa",
+        "concelho": "Lisboa",
+        "freguesia": "Oeiras, São Julião da Barra, Paço de Arcos e Caxias",
+        "descricao": "Lorem ipsum dolor sit amet, nam adhuc rebum utinam in, in modo vitae intellegam quo. Ludus gubergren ne vis. Vero malis nominati id has, nam nullam minimum ex. Cu his illud aperiam maiestatis, ne omnes iudico quo. Pro ex dolor expetendis, graeci noster ornatus vix at.",
+        "preco_venda": "344",
+        "zona": "amadora",
+        "area_util": "200",
+        "area_bruta": "30",
+        "wcs": "5",
+        "quartos": "4 Quartos",
+        "carros_garagem": "4",
+        "tipologia": "T2",
+        "natureza": "Apartamento",
+        "categoria-energetica": "A +",
+        "localizacao": "Peniche",
+        "estado": "Usado",
+        "img_galeria": [
+          {
+            "images": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/home.png"
+          },
+          {
+            "images": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/iconscout_logo-1024x1024.png"
+          }
+        ]
+      },
+      "56": {
+        "idautor": "3",
+        "referencia": "123291141-7",
+        "titulo": "Fantástica Moradia na Quinta da Marinha 3!",
+        "subtitulo": "House - T5 - Cascais e Estoril, Cascais",
+        "distrito": null,
+        "concelho": null,
+        "freguesia": null,
+        "descricao": "House - T5 - For Sale - Cascais e Estoril, Cascais",
+        "preco_venda": "3400000",
+        "zona": "Qtª da Marinha - Cascais e Estoril, Cascais",
+        "area_util": "287",
+        "area_bruta": "574,30",
+        "wcs": "5",
+        "quartos": "5",
+        "carros_garagem": "6",
+        "tipologia": "T2",
+        "natureza": "Apartamento",
+        "categoria-energetica": "A +",
+        "localizacao": "Cascais,Cascais",
+        "estado": "",
+        "img_galeria": [
+          {
+            "images": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/08/GTImageHandler.jpeg"
+          },
+          {
+            "images": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/L_bbbc94f704ed47fea8d382d12dec943d_iList-1.jpg"
+          },
+          {
+            "images": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/L_d57a2a5247914fd1ae3f3f882744c7d5_iList.jpg"
+          }
+        ]
+      },
+      "57": {
+        "idautor": "3",
+        "referencia": "123291141-7",
+        "titulo": "Fantástica Moradia na Quinta da Marinha 4!",
+        "subtitulo": "House - T5 - Cascais e Estoril, Cascais",
+        "distrito": null,
+        "concelho": null,
+        "freguesia": null,
+        "descricao": "House - T5 - For Sale - Cascais e Estoril, Cascais",
+        "preco_venda": "3400000",
+        "zona": "Qtª da Marinha - Cascais e Estoril, Cascais",
+        "area_util": "287",
+        "area_bruta": "574,30",
+        "wcs": "5",
+        "quartos": "5",
+        "carros_garagem": "6",
+        "tipologia": "T2",
+        "natureza": "Apartamento",
+        "categoria-energetica": "A +",
+        "localizacao": "Cascais,Cascais",
+        "estado": "",
+        "img_galeria": [
+          {
+            "images": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/L_bbbc94f704ed47fea8d382d12dec943d_iList.jpg"
+          }
+        ]
+      },
+      "67": {
+        "idautor": "3",
+        "referencia": "123291141-7",
+        "titulo": "Fantástica Moradia na Quinta da Marinha 4!",
+        "subtitulo": "House - T5 - Cascais e Estoril, Cascais",
+        "distrito": "Aveiro",
+        "concelho": "Oeiras",
+        "freguesia": "Oeiras",
+        "descricao": "House - T5 - For Sale - Cascais e Estoril, Cascais",
+        "preco_venda": "3400000",
+        "zona": "Qtª da Marinha - Cascais e Estoril, Cascais",
+        "area_util": "287",
+        "area_bruta": "574,30",
+        "wcs": "5",
+        "quartos": "5",
+        "carros_garagem": "6",
+        "tipologia": "T3",
+        "natureza": "Apartamento",
+        "categoria-energetica": "A +",
+        "localizacao": "Cascais,Cascais",
+        "estado": "Novo",
+        "img_galeria": [
+          {
+            "images": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/08/ImageResizeHandler.jpeg"
+          }
+        ]
+      },
+      "69": {
+        "idautor": "3",
+        "referencia": "123291141-7",
+        "titulo": "Fantástica Moradia na Quinta da Marinha 4!",
+        "subtitulo": "House - T5 - Cascais e Estoril, Cascais",
+        "distrito": "Aveiro",
+        "concelho": "Lisboa",
+        "freguesia": "Oeiras",
+        "descricao": "House - T5 - For Sale - Cascais e Estoril, Cascais",
+        "preco_venda": "3400000",
+        "zona": "Qtª da Marinha - Cascais e Estoril, Cascais",
+        "area_util": "287",
+        "area_bruta": "574,30",
+        "wcs": "5",
+        "quartos": "5 Quartos",
+        "carros_garagem": "6",
+        "tipologia": "T3",
+        "natureza": "Apartamento",
+        "categoria-energetica": "A +",
+        "localizacao": "Cascais,Cascais",
+        "estado": "Novo",
+        "img_galeria": [
+          {
+            "images": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/08/ImageResizeHandler.jpeg"
+          }
+        ]
+      }
+    },
+    
+    
+    "contacto": [
+      {
+        "imagem": "http://vps152961.ovh.net/imobiliaria/wp-content/uploads/2018/05/home.png",
+        "nome": "Zé Carlos",
+        "imobiliaria": "Já era",
+        "n_telemovel": "999999999",
+        "email": "teste@teste.com"
+      }
+    ]
+  }

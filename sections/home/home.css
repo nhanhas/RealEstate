@@ -1,11 +1,47 @@
+body {
+   font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#home-section {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    bottom: 0;
+    top: 230px;
+    overflow: hidden;
+    height: 840px !important;
+}
+
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+
 .carousel{
     position: static;
 }
 .carousel-inner{
     padding: 0 50px;
 }
-.carousel-item{
-    margin-top: 30px;
+.carousel-item {
+    margin-top: 45px;
 }
 
 .carousel-control-prev, .carousel-control-next{
@@ -15,16 +51,35 @@
 /* House Tile */
 .house-tile{
     position: relative;
+    height: 745px;
+  width: 425px;
     overflow: hidden;
     background-color: white;
     padding: 5px;
     -webkit-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
     box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.5);
+    border-left: 5px solid #fff !important;
+    border-right: 5px solid #fff !important;
+
 }
 
-.home-photo img{
-    width: 100%;
+.house-tile .text-size-lg {
+    font-size: 25px;
+}
+.home-photo img {
+    width: auto;
+
+    height: 500px;
+    margin-left: auto;
+    position:relative;
+    left:-50%;
+}
+
+.home-photo .inner {
+    display: inline-block;
+    position:relative;
+    right: -50%;
 }
 
 .home-details{
@@ -39,27 +94,30 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: -45px;
-    height: 30px;
+    top: -65px;
+    height: 50px;
     overflow: hidden;
 }
 
 .home-details-circle{
     cursor: pointer;
-    padding-top: 5px;
+    padding-top: 15px;
     background-color: white;
-    border-radius: 40px;
-    width: 50px;
-    height: 50px;
+    border-radius:110px;
+    width: 90px;
+    height: 80px;
     margin: 0 auto;
 }
-
+div {
+	margin-bottom:5px;
+}
 /* House Ribbon */
 .house-tile-ribbon{
     position: absolute;
     top: 60px;
     right: -60px;
-    width: 250px;
+    width: 260px;
+	height: 38px !important;
     transform: rotate(45deg);
     text-align: center;
     height: 25px;

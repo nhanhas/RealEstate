@@ -1,5 +1,5 @@
 <template class="task-template">
-    
+
     <section id="record-section" style="display: none">
 
         <div style="width: 100%">
@@ -8,32 +8,49 @@
 
         <!-- Record Main Canvas -->
         <div class="record-canvas">
-            
-            <!-- Carousel Photos -->
-            <div class="record-carousel-photos">
 
-                <!-- 1 img for now -->
-                <img id="record-img-background" src="https://cdn.trendir.com/wp-content/uploads/2016/06/Modern-house-in-Auckland-New-Zealand.jpg" style="width: 100%;height: 100%;">
+            <!-- Carousel Photos -->
+            <div class="record-carousel-photos carousel slide" id="recordCarouselIndicators" data-ride="carousel">
+
+                <div class="carousel-inner inner">
+
+                    <!-- TEMPLATE -->
+                    <div class="carousel-item active">
+                        <img class='img_house' src="https://cdn.trendir.com/wp-content/uploads/2016/06/Modern-house-in-Auckland-New-Zealand.jpg">
+                    </div>
+
+                </div>
 
                 <!-- Record Ribbon -->
                 <div class="record-tile-ribbon container-blue-light text-size-small text-white">
                     EXCLUSIVO
                 </div>
 
+
+                <!-- Carousel Navigators -->
+                <a class="carousel-control-prev" href="#recordCarouselIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#recordCarouselIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
             </div>
 
             <!-- Info Details -->
             <div class="record-info-details">
                 <div class="row text-size-lg text-bold text-blue-dark">
-                    <div class="col-6 text-left">DESCRIÇÃO DO IMÓVEL</div>
+                    <div class="col-6 text-left title_imovel">DESCRIÇÃO DO IMÓVEL</div>
                     <div class="col-6 text-right">Ref: <span id="ref-id">23182/18 SF</span></div>
                 </div>
 
                 <!-- Description -->
                 <div class="row record-info-description text-size-medium text-gray-light">
-                    <div class="col-12">
+                    <div class="col-12 text-size-splusmore ">
                             Avaliação Energética é o índice de desempenho térmico de um edifício, indicando os níveis de aquecimento e arrefecimento
-                             ideais no Inverno e no Verão. Edifícios que atingirem a Classificação energética A ou B são mais confortáveis 
+                             ideais no Inverno e no Verão. Edifícios que atingirem a Classificação energética A ou B são mais confortáveis
                              para se viver e terá contas de energia mais baixas.
                     </div>
                 </div>
@@ -42,45 +59,45 @@
                 <div class="row record-info-properties">
                     <table style="width:100%">
                         <!-- 1st Row -->
-                        <tr class="text-size-medium text-gray-light">
+                        <tr class="text-size-splusmore text-gray-light">
                           <th style="padding-top:0;">Venda</th>
-                          <th style="padding-top:0;">Distrito</th> 
+                          <th style="padding-top:0;">Distrito</th>
                           <th style="padding-top:0;">Concelho</th>
                           <th style="padding-top:0;">Freguesia</th>
                         </tr>
-                        <tr class="text-size-medium text-bold">
-                          <td>110 000€</td>
-                          <td>Lisboa</td> 
-                          <td>Oeiras</td>
-                          <td>Oeiras, São Julião da Barra, Paço de Arcos e Caxias</td>
+                        <tr class="text-size-splusmore text-bold">
+                          <td class='price_sell'>110 000€</td>
+                          <td class='district'>Lisboa</td>
+                          <td class='town'>Oeiras</td>
+                          <td class='small_town'>Oeiras, São Julião da Barra, Paço de Arcos e Caxias</td>
                         </tr>
 
                         <!-- 2nd Row -->
-                        <tr class="text-size-medium text-gray-light">
+                        <tr class="text-size-splusmore text-gray-light">
                             <th>Zona</th>
-                            <th>Estado</th> 
+                            <th>Estado</th>
                             <th>Referência</th>
                             <th>Natureza</th>
                         </tr>
-                        <tr class="text-size-medium text-bold">
-                            <td>--</td>
-                            <td>Usado</td> 
-                            <td>23182/18 SF</td>
-                            <td>Apartamento</td>
+                        <tr class="text-size-splusmore text-bold">
+                            <td class='place'>--</td>
+                            <td class='state_imov' style="vertical-align: text-top;">Usado</td>
+                            <td class='referencia' style="vertical-align: text-top;">23182/18 SF</td>
+                            <td class='type' style="vertical-align: text-top;">Apartamento</td>
                         </tr>
 
                         <!-- 3rd Row -->
-                        <tr class="text-size-medium text-gray-light">
+                        <tr class="text-size-splusmore text-gray-light">
                             <th>Tipologia</th>
-                            <th>Área Útil</th> 
+                            <th>Área Útil</th>
                             <th>Área Bruta</th>
-                            <th>Categoria Energética</th>
+                            <th>Cat. Energética</th>
                         </tr>
-                        <tr class="text-size-medium text-bold">
-                            <td>T2</td>
-                            <td>141 m2</td> 
-                            <td>207 m2</td>
-                            <td>D</td>
+                        <tr class="text-size-splusmore text-bold">
+                            <td class='tipology'>T2</td>
+                            <td class='area_small'>141 m2</td>
+                            <td class='area_big'>207 m2</td>
+                            <td class='energy'>D</td>
                         </tr>
 
                       </table>
@@ -88,32 +105,32 @@
 
                 <!-- Icons -->
                 <div class="row record-info-icons">
-                    <div class="record-property-group">
+                    <div class="record-property-group rooms">
                         <img src="assets/images/properties/property_quartos.jpg">
-                        <span class="properties-generic">3</span>
+                        <span class="properties-generic ">3</span>
                     </div>
-                    
-                    <div class="record-property-group">
+
+                    <div class="record-property-group wcs">
                         <img src="assets/images/properties/property_wc.jpg">
-                        <span class="properties-generic">2</span>
+                        <span class="properties-generic ">2</span>
                     </div>
 
-                    <div class="record-property-group">
+                    <div class="record-property-group cars">
                         <img src="assets/images/properties/property_cars.jpg">
-                        <span class="properties-generic">1</span>
+                        <span class="properties-generic ">1</span>
                     </div>
 
-                    <div class="record-property-group">
+                    <div class="record-property-group area_big_icon">
                         <img src="assets/images/properties/property_bruta.jpg">
-                        <span class="property-area">207 m2</span>
+                        <span class="property-area " >207 m2</span>
                     </div>
 
-                    <div class="record-property-group">
+                    <div class="record-property-group area_small_icon">
                         <img src="assets/images/properties/property_util.jpg">
                         <span class="property-area">141 m2</span>
                     </div>
 
-                    <div class="record-property-group">
+                    <div class="record-property-group energy_group">
                         <img src="assets/images/properties/property_energy.jpg">
                         <span class="property-energy">D</span>
                     </div>
@@ -121,7 +138,7 @@
                 </div>
 
 
-                <!-- Contact Button -->          
+                <!-- Contact Button -->
                 <div id="record-contact-btn" class="record-contact-btn container-blue-light">
                     <!-- Arrow -->
                     <span class="text-white"><i id="record-contact-chevron" class="fa fa-chevron-up"></i></span>
@@ -133,37 +150,37 @@
                     <div id="record-contact-details" class="text-white hidden">
                         <!-- Photo -->
                         <div class="contact-photo">
-                            <img src="assets/images/contact_photo.jpg"> 
-                        </div>    
-                        
+                            <img src="assets/images/contact_photo.jpg">
+                        </div>
+
                         <!-- Name -->
-                        <div><span> Mohamed Kzatan </span></div>
-                        <div><span class="text-size-small"> Casa Pronta Lisboa </span></div>
-                        
+                        <div><span class='text-size-splusmoree contact_name'> Mohamed Kzatan </span></div>
+                        <div><span class="text-size-splus company_name" > Casa Pronta Lisboa </span></div>
+
                         <hr class="contact-divider">
 
                         <!-- phone email -->
-                        <div><span class="text-size-small"> +351 930 519 117 </span></div>
-                        <div><span class="text-size-small"> elizabete_garcia@casa-pronta.com </span></div>
+                        <div><span class="text-size-splus contact_phone"> +351 930 519 117 </span></div>
+                        <div><span class="text-size-splus contact_email"> elizabete_garcia@casa-pronta.com </span></div>
 
                     </div>
 
 
                     <div class="nav-filter-btn-arrow-left"></div>
                     <div class="nav-filter-btn-arrow-right"></div>
-                </div> 
+                </div>
 
 
             </div>
 
 
 
-        </div> 
+        </div>
 
 
 
-        <!-- #4 - JS and Components -->    
-        <script type="text/javascript">        
+        <!-- #4 - JS and Components -->
+        <script type="text/javascript">
             require('./sections/record/record');
         </script>
 

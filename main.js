@@ -12,20 +12,22 @@ const {app, BrowserWindow, Menu} = electron;
 let mainWindow;
 
 app.on('ready', function(){
-    
+
     //#1 - Download App Content from service
     //then start app after download
     getAppContent();
 
 });
 
+
+
 //App Config (Sizes, icons and content)
 function mainAppStartup(){
-    //#1 - Create App Skeleton 
+    //#1 - Create App Skeleton
     const windowOptions = {
         width: 1900,
-        height : 860,
-        title: app.getName()    
+        height : 1080,
+        title: app.getName()
     }
 
     //#2 - Set app icon
@@ -43,9 +45,12 @@ function mainAppStartup(){
 
     //#5 - Build Main Menu from Template
     const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
-    //#5.1 - Load Main Menu 
+    //#5.1 - Load Main Menu
     Menu.setApplicationMenu(mainMenu);
 }
+
+
+
 
 //App content (download or local)
 function getAppContent(){
@@ -54,7 +59,7 @@ function getAppContent(){
     var readContentFromDisk = function(){
         //#2 - At this point, it must be stored in content.json
         let contentFile = path.join(__dirname, '/content/content.json');
-        
+
         //#3 - Read Content
         fs.readFile(contentFile, 'utf-8', (err, data) => {
             if(err){
@@ -71,15 +76,15 @@ function getAppContent(){
     }
 
     //#1 - Try to GET from Server
-    let contentURL = "http://vps152961.ovh.net/imobiliaria/api/?section=imobiliaria&author=1";
+    let contentURL = "http://vps152961.ovh.net/imobiliaria/api/?section=imobiliaria&author=3&rand=" + Math.floor(Math.random() * 1000); 
     //#1.1 - Make get now
     request(contentURL, { json: true }, (err, res, body) => {
-        if (err) { 
+        if (true) {
             console.log('There is no connection to server. Using Offline mode...');
             readContentFromDisk();
-            return false; 
+            return false;
         }
-        
+
         //#1.2 - if there is no error, store it [and read it in case of fail]
         let contentFile = path.join(__dirname, '/content/content.json');
         let jsonData = JSON.stringify(body);
@@ -96,9 +101,9 @@ function getAppContent(){
         readContentFromDisk();
     });
 
-    
-    
-    
+
+
+
 }
 
 //Main App Menu
@@ -107,7 +112,7 @@ const mainMenuTemplate = [
         label : 'Application',
         submenu : [
             {
-                label : 'Quit',                
+                label : 'Quit',
                 accelerator : process.platform === 'darwin' ? 'Command + Q' : 'Ctrl + Q',
                 click(){
                     app.quit();
@@ -156,7 +161,7 @@ const mainMenuTemplate = [
                 click(item, focusedWindow){
                     focusedWindow.toggleDevTools();
                 }
-            }            
+            }
         ]
     }
 ];
@@ -168,22 +173,22 @@ const mainMenuTemplate = [
 
 //#IPC handler when client click "+" at Home
 ipc.on('showHouseDetail', function (event, houseId) {
-    
+
     //#1 - Call main function responsible to render details
     renderHouseDetail(houseId);
-    
+
 });
 
 //#IPC handler when client click "Back" at Navbar
 ipc.on('closeHouseDetail', function (event, houseId) {
-    
+
     //#1 - Call main function responsible to render home
     closeHouseDetail();
-    
+
 });
 
 
-//#IPC when user click "+" to show details 
+//#IPC when user click "+" to show details
 ipc.on('ipc-show-house-detail', function (event, arg) {
     event.sender.send('showHouseDetail', arg);
 });
@@ -191,4 +196,9 @@ ipc.on('ipc-show-house-detail', function (event, arg) {
 //#IPC when user click "Back" on Navbar to close details
 ipc.on('ipc-close-house-detail', function (event, arg) {
     event.sender.send('closeHouseDetail', arg);
+})
+
+//#IPC when user click "filter" on Navbar to filter results
+ipc.on('ipc-do-filter-search', function (event, arg) {
+    event.sender.send('loadAssets', arg);
 })
